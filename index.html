@@ -806,35 +806,40 @@
         <h3>CONTACT US
         </h3>
     </div>
-    <form name="contact_form" class="default-form contact-form" action="sendmail.php" method="post">
+    <div name="contact_form" class="default-form contact-form">
         <div class="row">
             <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="form-group">
-                    <input type="text" name="Firt_Name" placeholder="First Name" required="">
+                    <input type="text" name="Firt_Name" placeholder="First Name" required="" id="firstName">
+                    <label id="firstName-error" style="display: none; "></label>
                 </div>
                 <div class="form-group">
-                    <input type="email" name="Email" placeholder="Email" required="">
+                    <input type="email" name="Email" placeholder="Email" required="" id="email">
+                    <label id="email-error" style="display: none; "></label>
                 </div>
                 
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="form-group">
-                    <input type="text" name="Last_Name" placeholder="Last Name" required="">
+                    <input type="text" name="Last_Name" placeholder="Last Name" required="" id="lastName">
+                    <label id="lastName-error" style="display: none; "></label>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="Phone" placeholder="Phone" required="">
+                    <input type="text" name="Phone" placeholder="Phone" required="" id="phone">
+                    <label id="phone-error" style="display: none; "></label>
                 </div>
             </div>
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="form-group">
-                    <textarea name="form_message" placeholder="Your Message" required=""></textarea>
+                    <textarea name="form_message" placeholder="Your Message" required="" id="message"></textarea>
+                    <label id="message-error" style="display: none; "></label>
                 </div>
                 <div class="form-group text-center">
-                    <button type="submit" class="btn-style-one">submit now</button>
+                    <button type="submit" class="btn-style-one" id="submitButton">submit now</button>
                 </div>
             </div>
         </div>
-    </form>
+    </div>
 </div>                        
             </div>
         </div>                    
@@ -949,12 +954,22 @@
 
 </div>
 <!--End pagewrapper-->
-
-
+      
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target=".header-top">
   <span class="icon fa fa-angle-up"></span>
 </div>
+    
+    
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.14.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.14.2/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>      
 
 <script src="plugins/jquery.js"></script>
 <script src="plugins/bootstrap.min.js"></script>
@@ -978,11 +993,16 @@
 </script>   
 <!--End counter script-->    
     
+<!---Contact form database script-->
+<script src="js/contactForm.js"></script>    
+    
 <script src="plugins/validate.js"></script>
 <script src="plugins/wow.js"></script>
 <script src="plugins/jquery-ui.js"></script>
 <script src="plugins/timePicker.js"></script>
 <script src="js/script.js"></script>
+    
+<script src="js/firebase_init.js"></script>
     
     
 </body>
