@@ -110,7 +110,7 @@
 		autoplaySpeed: 5000,
 		infinite: true,
 		speed: 300,
-		dots: false,
+		dots: true,
 		arrows: true,
 		fade: true,
 		responsive: [

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Soul of Braj</title>
+  <title>Contact | Soul of Braj</title>
 
   
   <!-- mobile responsive meta -->
@@ -18,10 +18,14 @@
   
   <!-- Stylesheets -->
   <link href="css/style.css" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>      
   
-  <!--Favicon-->
+  <!--Favicon-
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">-->
 
 </head>
 
@@ -36,7 +40,7 @@
             <div class="logo">
                   <figure>
                         <a href="index.html">
-                              <img src="images/logo.png" alt="">
+                              <img src="images/logo.png" alt="" width="160px">
                         </a>
                   </figure>
             </div>
@@ -49,7 +53,7 @@
                               <strong>Email</strong>
                               <br>
                               <a href="#">
-                                    <span>soulofbraj@gmail.com</span>
+                                    <span style="font-weight: 600;">soulofbraj@gmail.com</span>
                               </a>
                         </li>
                         <li class="item">
@@ -58,7 +62,7 @@
                               </div>
                               <strong>Call Now</strong>
                               <br>
-                              <span>+91-9999999999</span>
+                              <span style="font-weight: 600; font-family: monospace;">+91-8439406670</span>
                         </li>
                   </ul>
                   <div class="link-btn">
@@ -88,22 +92,22 @@
                               <a href="index.html">Home</a>
                         </li>
                         <li>
-                              <a href="about.html">About</a>
+                              <a href="#">About</a>
                         </li>
                         <li>
-                              <a href="vision.html">Vision</a>
+                              <a href="#">Vision</a>
                         </li >
                         <li>
-                              <a href="gallery.html">Gallery</a>
+                              <a href="#">Gallery</a>
                         </li>
                         <li>
-                              <a href="team.html">Team</a>
+                              <a href="#">Team</a>
                         </li>
                         <li>
-                              <a href="braj_news.html">Braj News</a>
+                              <a href="#">Braj News</a>
                         </li>
                        <li>
-                              <a href="success_stories.html">Success Stories</a>
+                              <a href="#">Success Stories</a>
                         </li>
                        <li class="active">
                               <a href="contact.html">Contact</a>
@@ -116,7 +120,7 @@
 <!--End Main Header -->
 
 <!--Page Title-->
-<section class="page-title text-center" style="background-image:url(images/background/3.jpg);">
+<section class="page-title text-center" style="background-image:url(images/header_bg.jpg);">
     <div class="container">
         <div class="title-text">
             <h1>Contact</h1>
@@ -146,8 +150,7 @@
                         <i class="fa fa-map-o"></i>
                         <div class="media-body">
                             <h3>Location</h3>
-                            <p>TEXT TEXT TEXT
-                                <br>TEXT TEXT TEXT TEXT</p>
+                            <p>Sri Krishna greens<br> F-104<br> Vridavan, Mathura<br> Uttar Pradesh<br> 281121</p>
                         </div>
                     </div>
                     <!-- Phone -->
@@ -156,8 +159,7 @@
                         <div class="media-body">
                             <h3>Phone</h3>
                             <p>
-                                 564-334-21-22-34
-                                <br> 564-334-21-22-38
+                                +91-8439406670
                             </p>
                         </div>
                     </div>
@@ -168,7 +170,6 @@
                             <h3>Email</h3>
                             <p>
                                 soulofbraj@gmail.com
-                                <br>soulofbraj@gmail.com
                             </p>
                         </div>
                     </div>
@@ -178,28 +179,38 @@
             <div class="col-md-8">
                 <div class="contact-form">
                     <!-- contact form start -->
-                    <form action="#" class="row">
-                        <!-- name -->
-                        <div class="col-md-6">
-                            <input type="text" name="name" class="form-control main" placeholder="Name" required>
+                    <div class="row">
+                        <!--first name -->
+                        <div class="col-md-6" style="padding-bottom: 30px;">
+                            <input type="text" name="name" class="form-control main" placeholder="First Name" id="firstName">
+                            <label id="firstName-error" style="display: none; "></label>
+                            
                         </div>
-                        <!-- email -->
-                        <div class="col-md-6">
-                            <input type="email" class="form-control main" placeholder="Email" required>
+                        <!-- last name -->
+                        <div class="col-md-6" style="padding-bottom: 30px;">
+                            <input type="text" class="form-control main" placeholder="Last Name" id="lastName">
+                            <label id="lastName-error" style="display: none; "></label>
+                        </div>
+                         <!-- email -->
+                        <div class="col-md-12"  style="padding-bottom: 30px;">
+                            <input type="email" class="form-control main" placeholder="Email" id="email">
+                            <label id="email-error" style="display: none; "></label>
                         </div>
                         <!-- phone -->
-                        <div class="col-md-12">
-                            <input type="text" class="form-control main" placeholder="Phone" required>
+                        <div class="col-md-12" style="padding-bottom: 30px;">
+                            <input type="text" class="form-control main" placeholder="Phone" id="phone">
+                            <label id="phone-error" style="display: none; "></label>
                         </div>
                         <!-- message -->
-                        <div class="col-md-12">
-                            <textarea name="message" rows="15" class="form-control main" placeholder="Your message"></textarea>
+                        <div class="col-md-12" style="padding-bottom: 30px;">
+                            <textarea name="message" rows="15" class="form-control main" placeholder="Your message" id="message"></textarea>
+                            <label id="message-error" style="display: none; "></label>
                         </div>
                         <!-- submit button -->
                         <div class="col-md-12 text-right">
-                            <button class="btn btn-style-one" type="submit">Send Message</button>
+                            <button class="btn btn-style-one" type="submit" id="submitButton">Send Message</button>
                         </div>
-                    </form>
+                    </div>
                     <!-- contact form end -->
                 </div>
             </div>
@@ -218,7 +229,7 @@
 </section>
 <!--====  End of Google Map  ====-->
 
-<!--footer-main--> 
+<!--footer-main-->
 <footer class="footer-main">
   <div class="footer-top">
     <div class="container">
@@ -228,7 +239,7 @@
             <div class="footer-logo">
               <figure>
                 <a href="index.html">
-                  <img src="images/logo.png" alt="">
+                  <img src="images/BRAJ%20WHITE.png" alt="" width="150px;">
                 </a>
               </figure>
             </div>
@@ -236,17 +247,17 @@
             <ul class="location-link">
               <li class="item">
                 <i class="fa fa-map-marker"></i>
-                <p>Modamba, NY 80021, United States</p>
+                <p>Sri Krishna greens<br> F-104<br> Vridavan, Mathura<br> Uttar Pradesh<br> 281121</p>
               </li>
               <li class="item">
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
                 <a href="#">
-                  <p>soulofbraj@gmail.com</p>
+                  <p style="font-weight: 600;">soulofbraj@gmail.com</p>
                 </a>
               </li>
               <li class="item">
                 <i class="fa fa-phone" aria-hidden="true"></i>
-                <p>+31-9999999999</p>
+                <p style="font-weight: 600; font-family: monospace;">+91-8439406670</p>
               </li>
             </ul>
             <ul class="list-inline social-icons">
@@ -257,7 +268,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="col-md-4 col-sm-6 col-xs-12 col-md-push-4">
           <h6>Services</h6>
           <ul class="menu-link">
             <li>
@@ -282,47 +293,12 @@
             </li>
           </ul>
         </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="social-links">
-            <h6>Recent Activites</h6>
-            <ul>
-              <li class="item">
-                <div class="media">
-                  <div class="media-left">
-                    <a href="#">
-                      <img class="media-object" src="images/blog/post-thumb-small.jpg" alt="post-thumb">
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <h4 class="media-heading"><a href="#">Title</a></h4>
-                    <p>Short Descreption</p>
-                  </div>
-                </div>
-              </li>
-              <li class="item">
-                <div class="media">
-                  <div class="media-left">
-                    <a href="#">
-                      <img class="media-object" src="images/blog/post-thumb-small.jpg" alt="post-thumb">
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <h4 class="media-heading">
-                      <a href="#">Title</a>
-                    </h4>
-                    <p>Short Descreption</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>
 </footer>
 <!--End footer-main-->
-
 
 </div>
 <!--End pagewrapper-->
@@ -332,6 +308,15 @@
 <div class="scroll-to-top scroll-to-target" data-target=".header-top">
   <span class="icon fa fa-angle-up"></span>
 </div>
+    
+    
+ <!--firebase script-->   
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
+<!---End firebase script-->
+    
+ 
 
 <script src="plugins/jquery.js"></script>
 <script src="plugins/bootstrap.min.js"></script>
@@ -340,15 +325,14 @@
 <script src="plugins/slick/slick.min.js"></script>
 <!-- FancyBox -->
 <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
-<!-- Google Map -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
-<script src="plugins/google-map/gmap.js"></script>
-
-<script src="plugins/validate.js"></script>
+    
+<script src="js/contactForm.js"></script> 
 <script src="plugins/wow.js"></script>
 <script src="plugins/jquery-ui.js"></script>
 <script src="plugins/timePicker.js"></script>
 <script src="js/script.js"></script>
+    
+<script src="js/firebase_init.js"></script>
 </body>
 
 </html>
