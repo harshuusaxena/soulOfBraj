@@ -3,12 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Contact | Soul of Braj</title>
+  <title>CSR News | Soul of Braj</title>
 
   
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
   
   <!-- Slick Carousel -->
   <link rel="stylesheet" href="plugins/slick/slick.css">
@@ -18,14 +20,12 @@
   
   <!-- Stylesheets -->
   <link href="css/style.css" rel="stylesheet">
-    
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>      
   
-  <!--Favicon-
+  <!--Favicon-->
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">-->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+ 
 
 </head>
 
@@ -33,14 +33,13 @@
 <body>
   <div class="page-wrapper">
     
-
 <!--Header Upper-->
 <section class="header-uper">
       <div class="container clearfix">
             <div class="logo">
                   <figure>
                         <a href="index.html">
-                              <img src="images/logo.png" alt="" width="160px">
+                              <img src="images/logo.png" alt="" width="160px;">
                         </a>
                   </figure>
             </div>
@@ -85,7 +84,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                   </button>
-          </div>
+            </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                         <li>
@@ -103,13 +102,13 @@
                         <li>
                               <a href="#">Team</a>
                         </li>
-                        <li>
+                        <li class="active">
                               <a href="csr-news.html">CSR News</a>
                         </li>
-                       <li>
+                        <li>
                               <a href="#">Success Stories</a>
                         </li>
-                       <li class="active">
+                        <li>
                               <a href="contact.html">Contact</a>
                         </li>
                         
@@ -123,111 +122,23 @@
 <section class="page-title text-center" style="background-image:url(images/header_bg.jpg);">
     <div class="container">
         <div class="title-text">
-            <h1>Contact</h1>
+            <h1>CSR news</h1>
             <ul class="title-menu clearfix">
                 <li>
                     <a href="index.html">home &nbsp;/</a>
                 </li>
-                <li>Contact</li>
+                <li>CSR News</li>
             </ul>
         </div>
     </div>
 </section>
 <!--End Page Title-->
-
-<!--==================================
-=            Contact Form            =
-===================================-->
-<section class="section contact">
-    <!-- container start -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <!-- address start -->
-                <div class="address-block">
-                    <!-- Location -->
-                    <div class="media">
-                        <i class="fa fa-map-o"></i>
-                        <div class="media-body">
-                            <h3>Location</h3>
-                            <p>Sri Krishna greens<br> F-104<br> Vridavan, Mathura<br> Uttar Pradesh<br> 281121</p>
-                        </div>
-                    </div>
-                    <!-- Phone -->
-                    <div class="media">
-                        <i class="fa fa-phone"></i>
-                        <div class="media-body">
-                            <h3>Phone</h3>
-                            <p>
-                                +91-8439406670
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Email -->
-                    <div class="media">
-                        <i class="fa fa-envelope-o"></i>
-                        <div class="media-body">
-                            <h3>Email</h3>
-                            <p>
-                                soulofbraj@gmail.com
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- address end -->
-            </div>
-            <div class="col-md-8">
-                <div class="contact-form">
-                    <!-- contact form start -->
-                    <div class="row">
-                        <!--first name -->
-                        <div class="col-md-6" style="padding-bottom: 30px;">
-                            <input type="text" name="name" class="form-control main" placeholder="First Name" id="firstName">
-                            <label id="firstName-error" style="display: none; "></label>
-                            
-                        </div>
-                        <!-- last name -->
-                        <div class="col-md-6" style="padding-bottom: 30px;">
-                            <input type="text" class="form-control main" placeholder="Last Name" id="lastName">
-                            <label id="lastName-error" style="display: none; "></label>
-                        </div>
-                         <!-- email -->
-                        <div class="col-md-12"  style="padding-bottom: 30px;">
-                            <input type="email" class="form-control main" placeholder="Email" id="email">
-                            <label id="email-error" style="display: none; "></label>
-                        </div>
-                        <!-- phone -->
-                        <div class="col-md-12" style="padding-bottom: 30px;">
-                            <input type="text" class="form-control main" placeholder="Phone" id="phone">
-                            <label id="phone-error" style="display: none; "></label>
-                        </div>
-                        <!-- message -->
-                        <div class="col-md-12" style="padding-bottom: 30px;">
-                            <textarea name="message" rows="15" class="form-control main" placeholder="Your message" id="message"></textarea>
-                            <label id="message-error" style="display: none; "></label>
-                        </div>
-                        <!-- submit button -->
-                        <div class="col-md-12 text-right">
-                            <button class="btn btn-style-one" type="submit" id="submitButton">Send Message</button>
-                        </div>
-                    </div>
-                    <!-- contact form end -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- container end -->
-</section>
-<!--====  End of Contact Form  ====-->
-
-<!--================================
-=            Google Map            =
-=================================-->
-<section class="map">
-    <!-- Google Map -->
-    <div id="map"></div>
-</section>
-<!--====  End of Google Map  ====-->
+         
+<div style="padding-top: 60px; padding-bottom: 60px;">
+<!--<rssapp-wall id="yr2eUoPqgalDTDaj"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script> -->
+<rssapp-list id="yr2eUoPqgalDTDaj"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
+<rssapp-list id="ZUl5BZyL7yATtfbk"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
+</div>
 
 <!--footer-main-->
 <footer class="footer-main">
@@ -247,7 +158,8 @@
             <ul class="location-link">
               <li class="item">
                 <i class="fa fa-map-marker"></i>
-                <p>Sri Krishna greens<br> F-104<br> Vridavan, Mathura<br> Uttar Pradesh<br> 281121</p>
+                  <p>Sri Krishna greens<br> F-104<br> Vridavan, Mathura<br> Uttar Pradesh<br> 281121</p>
+            
               </li>
               <li class="item">
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
@@ -300,6 +212,7 @@
 </footer>
 <!--End footer-main-->
 
+
 </div>
 <!--End pagewrapper-->
 
@@ -309,14 +222,7 @@
   <span class="icon fa fa-angle-up"></span>
 </div>
     
-    
- <!--firebase script-->   
-<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
-<!---End firebase script-->
-    
- 
+
 
 <script src="plugins/jquery.js"></script>
 <script src="plugins/bootstrap.min.js"></script>
@@ -325,14 +231,15 @@
 <script src="plugins/slick/slick.min.js"></script>
 <!-- FancyBox -->
 <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
-    
-<script src="js/contactForm.js"></script> 
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+<script src="plugins/google-map/gmap.js"></script>
+
+<script src="plugins/validate.js"></script>
 <script src="plugins/wow.js"></script>
 <script src="plugins/jquery-ui.js"></script>
 <script src="plugins/timePicker.js"></script>
 <script src="js/script.js"></script>
-    
-<script src="js/firebase_init.js"></script>
 </body>
 
 </html>
