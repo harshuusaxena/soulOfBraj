@@ -37,8 +37,30 @@ if(isset($_POST['submitButton'])){
         'pan_number' => $paan,
     ];
     
+    
     $ref = "Donation_using_gateway/";
     $postdata = $database->getReference($ref)->push($data);
+    
+    
+    require('oAuth/PHPMailerAutoload.php');
+    
+    $mail = new PHPMailer;
+    $mail-> isSMTP();
+    
+    $mail->Host = 'mail.soulofbrajfederation.org ';
+    $mail->Port = 465;
+    $mail->SMTPAuth=true;
+    $mail->SMTPSecure='tls';
+    
+    $mail->Username = 'soulofbrajfederationorg@gmail.com';
+    $mail->Password = 'tanu6670';
+    
+    $mail->setFrom('soulofbrajfederationorg@gmail.com','Soul Of Braj Federation');
+    $mail->addAddress('info@soulofbrajfederation.org');
+    
+    $mail->isHTML(true);
+    $mail->Subject='Donation form info from gateway page';
+    $mail->Body="<h1>Hii, this is testing mail.</h1>";
     
 }
 

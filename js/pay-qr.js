@@ -231,6 +231,12 @@ function donateFormData(transaction, amount, lastNames, dob, gender, emails, pho
         document.getElementById("city").value = "";
         document.getElementById("donation").value = "";
         
+        sendMail('info@soulofbrajfederation.org','Regarding Donation Info','<h4>Hare Krishna Admin,</h4><h4>We have got a new donation from '+lastNames+'. The details are as following:-<br></h4><table><tr><td>Transcation Id</td><td>:</td><td>'+transaction+'</td></tr><tr><td>Donation Amount</td><td>:</td><td>'+amount+'</td></tr><tr><td>Name</td><td>:</td><td>'+lastNames+'</td></tr><tr><td>DOB</td><td>:</td><td>'+dob+'</td></tr><tr><td>Gender</td><td>:</td><td>'+gender+'</td></tr><tr><td>Email Id</td><td>:</td><td>'+emails+'</td></tr><td>Mobile No.</td><td>:</td><td>'+phones+'</td></tr> <tr><td>PAN Number</td><td>:</td><td>'+panNumber+'</td></tr><tr><td>Aadhaar Number</td><td>:</td><td>'+aadharNumber+'</td></tr><tr><td>PIN Number</td><td>:</td><td>'+pinNumber+'</td></tr><tr><td>State</td><td>:</td><td>'+state+'</td></tr><tr><td>City</td><td>:</td><td>'+city+'</td></tr><tr><td>Donation For</td><td>:</td><td>'+donation+'</td></tr></table>');
+        
+        sendMail(emails,'Donation Receipt','<h4>Hare Krishna '+lastNames+',</h4><br><h4>Thanks for donating to Soul Of Braj Federation. Your details are as following:-<br></h4><table><tr><td>Transcation Id</td><td>:</td><td>'+transaction+'</td></tr><tr><td>Donation Amount</td><td>:</td><td>'+amount+'</td></tr><tr><td>Name</td><td>:</td><td>'+lastNames+'</td></tr><tr><td>DOB</td><td>:</td><td>'+dob+'</td></tr><tr><td>Gender</td><td>:</td><td>'+gender+'</td></tr><tr><td>Email Id</td><td>:</td><td>'+emails+'</td></tr><td>Mobile No.</td><td>:</td><td>'+phones+'</td></tr> <tr><td>PAN Number</td><td>:</td><td>'+panNumber+'</td></tr><tr><td>Aadhaar Number</td><td>:</td><td>'+aadharNumber+'</td></tr><tr><td>PIN Number</td><td>:</td><td>'+pinNumber+'</td></tr><tr><td>State</td><td>:</td><td>'+state+'</td></tr><tr><td>City</td><td>:</td><td>'+city+'</td></tr><tr><td>Donation For</td><td>:</td><td>'+donation+'</td></tr></table><br><h4>Please revert back to info@soulofbrajfederation.org in case of any query.</h4>');
+        
+       
+        
         $("#submitButtons").attr("disabled", false);
         $(".spinner-border").hide();
         
@@ -252,4 +258,17 @@ function donateFormData(transaction, amount, lastNames, dob, gender, emails, pho
            console.log("errorMessage", errorMessage);
 });*/
     
+}
+
+function sendMail(to, subject, body) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+            console.log(this.responseText);
+        }
+    });
+    xhr.open("GET", "https://us-central1-soulofbraj-80ea9.cloudfunctions.net/sendMail?dest=" + to + "&subject=" + subject + "&body=" + body, true);
+    xhr.send();
+
 }

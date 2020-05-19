@@ -132,6 +132,9 @@ function contactFormData(firstName, lastName, email, phone, message){
     }).then(function (){
         
         swal("Great!", "Successfully submitted", "success");
+        sendMail('info@soulofbrajfederation.org','Contact Form Info','<h4>Hii Admin,</h4><h4>We have got a new contact info from '+firstName+'. The details are as following:-<br></h4><table><tr><td>First Name</td><td>:</td><td>'+firstName+'</td></tr><tr><td>Last Name</td><td>:</td><td>'+lastName+'</td></tr><td>Mobile No.</td><td>:</td><td>'+phone+'</td></tr> <tr><td>Email</td><td>:</td><td>'+email+'</td></tr><tr><td>Message</td><td>:</td><td>'+message+'</td></tr></table>');
+        
+        sendMail(email,'noreply','<h4>Hii '+firstName+',</h4><br><h4>Thanks for contacting to Soul Of Braj Federation. Your details are as following:-<br></h4><table><tr><td>Name</td><td>:</td><td>'+firstName+'</td> </tr><tr><td>Last Name</td><td>:</td><td>'+lastName+'</td></tr>   <td>Mobile No.</td><td>:</td><td>'+phone+'</td></tr> <tr><td>Email</td><td>:</td><td>'+email+'</td></tr><tr><td>Message</td><td>:</td><td>'+message+'</td></tr></table><br><h4>Please revert back to info@soulofbrajfederation.org in case of any query.</h4>');
         
         document.getElementById("firstName").value = "";
         document.getElementById("lastName").value = "";
@@ -160,4 +163,19 @@ function contactFormData(firstName, lastName, email, phone, message){
            console.log("errorMessage", errorMessage);
 });*/
     
+}
+
+
+
+function sendMail(to, subject, body) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+            console.log(this.responseText);
+        }
+    });
+    xhr.open("GET", "https://us-central1-soulofbraj-80ea9.cloudfunctions.net/sendMail?dest=" + to + "&subject=" + subject + "&body=" + body, true);
+    xhr.send();
+
 }
