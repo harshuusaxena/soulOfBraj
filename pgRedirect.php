@@ -42,28 +42,37 @@ if(isset($_POST['submitButton'])){
     $postdata = $database->getReference($ref)->push($data);
     
     
-    require('oAuth/PHPMailerAutoload.php');
+    
+    
+}
+
+require( 'phpmailer/PHPMailerAutoload.php');
     
     $mail = new PHPMailer;
-    $mail-> isSMTP();
-    
-    $mail->Host = 'mail.soulofbrajfederation.org ';
-    $mail->Port = 465;
+    $mail->IsSMTP();
+
+    //$mail->SMTPDebug= 1;
+    $mail->Host = 'smtp.gmail.com';
+    $mail->Port = 587;
     $mail->SMTPAuth=true;
     $mail->SMTPSecure='tls';
     
     $mail->Username = 'soulofbrajfederationorg@gmail.com';
     $mail->Password = 'tanu6670';
     
-    $mail->setFrom('soulofbrajfederationorg@gmail.com','Soul Of Braj Federation');
-    $mail->addAddress('info@soulofbrajfederation.org');
+    $mail->setFrom('info@soulofbrajfederation.org','Soul Of Braj Federation');
+    $mail->addAddress('soulofbrajfederationorg@gmail.com');
     
     $mail->isHTML(true);
-    $mail->Subject='Donation form info from gateway page';
-    $mail->Body="<h1>Hii, this is testing mail.</h1>";
-    
-}
+    $mail->Subject="Donation form info from gateway page";
+    $mail->Body="<h3>Hare Krishna Admin,</h3><h4>We have got a new donation by " .$_POST['lastName'].". The details are as following:-<br></h4><table><tr><td>Transcation Id</td><td>:</td><td>".$_POST['ORDER_ID']."</td></tr><tr><td>Donation Amount</td><td>:</td><td>".$_POST['TXN_AMOUNT']."</td></tr><tr><td>Name</td><td>:</td><td>".$_POST['lastName']."</td></tr><tr><td>DOB</td><td>:</td><td>".$_POST['birthday']."</td></tr><tr><td>Gender</td><td>:</td><td>".$_POST['gender']."</td></tr><tr><td>Email Id</td><td>:</td><td>".$_POST['email']."</td></tr><td>Mobile No.</td><td>:</td><td>".$_POST['phone']."</td></tr> <tr><td>PAN Number</td><td>:</td><td>".$_POST['paan']."</td></tr><tr><td>Aadhaar Number</td><td>:</td><td>".$_POST['Aadhaar_Number']."</td></tr><tr><td>PIN Number</td><td>:</td><td>".$_POST['Pin_Number']."</td></tr><tr><td>State</td><td>:</td><td>".$_POST['state']."</td></tr><tr><td>City</td><td>:</td><td>".$_POST['City']."</td></tr><tr><td>Donation For</td><td>:</td><td>".$_POST['donation']."</td></tr></table>";
 
+if(!$mail-> send()){
+echo ".";
+}
+else{
+    echo "";
+}
 
 
 header("Pragma: no-cache");

@@ -305,7 +305,7 @@
                             <label id="donation-error" style="display: none; "></label>
                             </div>
                         <div class="card-footer">
-                    <input class="btn-style-one" name="submitButton"  type="submit" value="proceed">
+                    <input class="btn-style-one" name="submitButton"  type="submit" value="proceed" id="submitButton">
                 </div>
                     </form>
                 </div>
@@ -335,7 +335,7 @@
             <ul class="location-link">
               <li class="item">
                 <i class="fa fa-map-marker"></i>
-                <p>Sri Krishna greens<br> F-104<br> Vridavan, Mathura<br> Uttar Pradesh<br> 281121</p>
+                <p>Sri Krishna greens<br> Vridavan, Mathura<br> Uttar Pradesh<br> 281121</p>
               </li>
               <li class="item">
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
@@ -377,7 +377,7 @@
             </li>
             <li>
               <a href="rural_devlopment.html">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>Rural development and Preserving Old Heritage</a>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Water and Sanitation and Rural Development</a>
             </li>
           </ul>
         </div>
@@ -413,7 +413,6 @@
 <script src="plugins/slick/slick.min.js"></script>
 <!-- FancyBox -->
 <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
-    
 
 <script src="plugins/wow.js"></script>
 <script src="plugins/jquery-ui.js"></script>
