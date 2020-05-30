@@ -117,10 +117,10 @@
                               <a href="index.html">Home</a>
                         </li>
                         <li >
-                              <a href="#">About</a>
+                              <a href="about.html">About</a>
                         </li>
                         <li>
-                              <a href="#">Vision</a>
+                              <a href="vision.html">Vision</a>
                         </li >
                         <li>
                               <a href="#">Gallery</a>
@@ -136,6 +136,9 @@
                         </li>
                        <li>
                               <a href="contact.html">Contact</a>
+                        </li>
+                     <li>
+                              <a href="#">Publication</a>
                         </li>
                   </ul>
         </div>
