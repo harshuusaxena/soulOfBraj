@@ -256,7 +256,7 @@
                                                         <option value="Bihar">Bihar</option>
                                                         <option value="Chattisgarh">chattisgarh</option>
                                                         <option value="Goa">Goa</option>
-                                                        <option value="Gujrat">Gujrat</option>
+                                                        <option value="Gujarat">Gujarat</option>
                                                         <option value="Haryana">Haryana</option>
                                                         <option value="Himachal pradesh">Himachal Pradesh</option>
                                                         <option value="Jammu & Kashmir">Jammu & Kashmir</option>
@@ -338,7 +338,7 @@
             <ul class="location-link">
               <li class="item">
                 <i class="fa fa-map-marker"></i>
-                <p>Sri Krishna greens<br> Vridavan, Mathura<br> Uttar Pradesh<br> 281121</p>
+                <p>Sri Krishna greens<br> Vrindavan, Mathura<br> Uttar Pradesh<br> 281121</p>
               </li>
               <li class="item">
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
@@ -363,26 +363,30 @@
           <h6>Services</h6>
           <ul class="menu-link">
             <li>
-              <a href="food_distribution.html">
+              <a href="index.html#activites">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Sanitary Pads</a>
+            </li>  
+            <li>
+              <a href="index.html#activites">
                 <i class="fa fa-angle-right" aria-hidden="true"></i>Food distribution for needful </a>
             </li>
             <li>
-              <a href="basic_education.html">
+              <a href="index.html#activites">
                 <i class="fa fa-angle-right" aria-hidden="true"></i>Basic education for all children </a>
             </li>
             <li>
-              <a href="health_care.html">
+              <a href="index.html#activites">
                 <i class="fa fa-angle-right" aria-hidden="true"></i>Basic health care facilities for brajwasi </a>
             </li>
             <li>
-              <a href="community_service.html">
+              <a href="index.html#activites">
                 <i class="fa fa-angle-right" aria-hidden="true"></i>Community Service </a>
             </li>
             <li>
-              <a href="rural_devlopment.html">
+              <a href="index.html#activites">
                 <i class="fa fa-angle-right" aria-hidden="true"></i>Water and Sanitation and Rural Development</a>
             </li>
-          </ul>
+          </ul>  
         </div>
         
       </div>

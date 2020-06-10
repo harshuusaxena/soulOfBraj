@@ -107,10 +107,10 @@
 	$('.hero-slider').slick({
 		slidesToShow: 1,
 		autoplay: true,
-		autoplaySpeed: 5000,
+		autoplaySpeed: 4000,
 		infinite: true,
 		speed: 300,
-		dots: true,
+		dots: false,
 		arrows: true,
 		fade: true,
 		responsive: [

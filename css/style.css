@@ -552,7 +552,7 @@ li {
 }
 
 .hero-slider .slider-item {
-  height: 80vh;
+  height: 100%;
   display: flex !important;
   justify-content: center;
   align-items: center;
