@@ -126,7 +126,7 @@
                               <a href="gallery.html">Gallery</a>
                         </li>
                         <li>
-                              <a href="#">Team</a>
+                              <a href="team.html">Team</a>
                         </li>
                         <li>
                               <a href="csr-news.html">CSR News</a>
@@ -134,11 +134,11 @@
                         <li>
                               <a href="#">Success Stories</a>
                         </li>
+					   <li>
+                              <a href="publications.html">Publications</a>
+                        </li>
                        <li>
                               <a href="contact.html">Contact</a>
-                        </li>
-                     <li>
-                              <a href="#">Publication</a>
                         </li>
                   </ul>
         </div>
@@ -422,7 +422,6 @@
 <!-- FancyBox -->
 <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
 
-<script src="plugins/wow.js"></script>
 <script src="plugins/jquery-ui.js"></script>
 <script src="js/script.js"></script>   
     
